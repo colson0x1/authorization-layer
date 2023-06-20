@@ -15,7 +15,7 @@ function Contact() {
   const login = (
     <form action="#">
       <input type="password" placeholder="Password" />
-      <input type="submit" />
+      <input type="submit" onSubmit={handleSubmit} />
     </form>
   );
 
@@ -29,7 +29,7 @@ function Contact() {
   return (
     <div id="authorization">
       <h1>{authorized ? 'Contact' : 'Enter the Password'}</h1>
-      {authorized ? contactInfo() : login()}
+      {authorized ? contactInfo : login}
     </div>
   );
 }
